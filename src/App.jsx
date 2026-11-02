@@ -5,11 +5,12 @@ import MainLayout from "./components/layout/MainLayout";
 import Overview from "./pages/Overview";
 import Environment from "./pages/Environment";
 import Energy from "./pages/Energy";
+import Control from "./pages/Control";
+import Experiments from "./pages/Experiments";
+import AlertsLogs from "./pages/AlertsLogs";
+import Settings from "./pages/Settings";
 
 const pages = [
-  { path: "/control", title: "Control & Configuration" },
-  { path: "/experiments", title: "Performance Analysis" },
-  { path: "/alerts", title: "Alerts & System Logs" },
   { path: "/settings", title: "System Settings" },
 ];
 
@@ -32,6 +33,10 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="/environment" element={<Environment />} />
           <Route path="/energy" element={<Energy />} />
+          <Route path="/control" element={<Control />} />
+          <Route path="/experiments" element={<Experiments />} />
+          <Route path="/alerts" element={<AlertsLogs />} /> 
+          <Route path="/settings" element={<Settings />} />
           {pages.map((page) => (
             <Route
               key={page.path}

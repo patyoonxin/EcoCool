@@ -341,11 +341,6 @@ export default function Environment() {
         </div>
       </section>
 
-      {/* Footer */}
-      <div className="text-xs text-gray-400 text-center pb-4">
-        EcoCool Node · Environmental Monitoring · Simulated Data
-      </div>
-
     </div>
   );
 }

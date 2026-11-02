@@ -579,11 +579,6 @@ export default function Energy() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <div className="text-xs text-gray-400 text-center pb-4">
-        EcoCool Node · Energy Management · Simulated Data
-      </div>
-
     </div>
   );
 }
