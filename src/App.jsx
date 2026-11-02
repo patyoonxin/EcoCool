@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./components/layout/MainLayout";
 import Overview from "./pages/Overview";
+import Environment from "./pages/Environment";
+import Energy from "./pages/Energy";
 
 const pages = [
-  { path: "/environment", title: "Environmental Monitoring" },
-  { path: "/energy", title: "Energy Management" },
   { path: "/control", title: "Control & Configuration" },
   { path: "/experiments", title: "Performance Analysis" },
   { path: "/alerts", title: "Alerts & System Logs" },
@@ -30,6 +30,8 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Overview />} />
+          <Route path="/environment" element={<Environment />} />
+          <Route path="/energy" element={<Energy />} />
           {pages.map((page) => (
             <Route
               key={page.path}
