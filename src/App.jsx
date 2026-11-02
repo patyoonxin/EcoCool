@@ -2,9 +2,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./components/layout/MainLayout";
+import Overview from "./pages/Overview";
 
 const pages = [
-  { path: "/", title: "Welcome to EcoCool Node" },
   { path: "/environment", title: "Environmental Monitoring" },
   { path: "/energy", title: "Energy Management" },
   { path: "/control", title: "Control & Configuration" },
@@ -29,6 +29,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
+          <Route index element={<Overview />} />
           {pages.map((page) => (
             <Route
               key={page.path}
